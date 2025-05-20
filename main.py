@@ -18,7 +18,6 @@ if __name__ == "__main__":
     model = build_seq2seq_model(num_tokens=vocab_size, latent_dim=64)
     history = train_seq2seq_model(model, enc_in, dec_in, dec_out, batch_size=64, epochs=5)
 
-    # Visualize training history
     plot_training_history(
         history,
         metrics=['loss', 'accuracy'],
